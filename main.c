@@ -1,30 +1,15 @@
-//여러가지 함수 구현//
+//두 가지 코드의 결과를 확인해보기//
 
 #include <stdio.h>
 
-int sumTwo(int a, int b)
+void square(int a)
 {
-    return (a + b);
+    a = a*a;
 }
 
-int square(int n)
+int main()
 {
-    return (n*n);
-}
-
-int get_max(int x, int y)
-{
-    if (x > y)
-        return x;
-    
-    return y;
-}
-
-int main(void)
-{
-    printf("sumTwo result : %i\n" , sumTwo(2, 5));
-    printf("square result : %i\n", square(10));
-    printf("get_max result : %i\n", get_max(2, 5));
-
-    return 0;
+    int a=2;
+    square(a);
+    printf("a=%i\n", a);
 }

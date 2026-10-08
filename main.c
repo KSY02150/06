@@ -1,18 +1,30 @@
-//함수 실행 시 메모리 상태 관찰//
+//여러가지 함수 구현//
 
 #include <stdio.h>
 
-void func(void)
+int sumTwo(int a, int b)
 {
-    int x;
-    printf("func x is at %p\n", &x);
+    return (a + b);
+}
+
+int square(int n)
+{
+    return (n*n);
+}
+
+int get_max(int x, int y)
+{
+    if (x > y)
+        return x;
+    
+    return y;
 }
 
 int main(void)
 {
-    int x;
-    printf("main x is at %p\n", &x);
-    func();
+    printf("sumTwo result : %i\n" , sumTwo(2, 5));
+    printf("square result : %i\n", square(10));
+    printf("get_max result : %i\n", get_max(2, 5));
 
     return 0;
 }
